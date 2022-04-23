@@ -1,0 +1,3 @@
+maths, 99
+phy,88
+comp,230
