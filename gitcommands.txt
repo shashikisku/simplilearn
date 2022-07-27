@@ -1,6 +1,7 @@
 git init (one time command to initialize the repository)
 git status
-git add.
+git add . (replace . with file name if you want specific file to commit)-staged
+		(use "git restore --staged <file>..." to unstage)
 git commit -m "some comments"
 
 ================================================
