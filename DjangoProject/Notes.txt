@@ -1,0 +1,35 @@
+1) py -m venv djangoEnv -> to create Virtual env in Python, to separate diff. project dependencies
+2) djangoEnv\Scripts\activate.bat -> to activate venv
+3) py -m pip install Django -> install django
+4) django-admin --version -> check django version
+5) django-admin startproject mywebsite -> create a project folder and subfolder with project name 
+6) py manage.py runserver -> first get into subfolder, then run cmd to start the server
+7) add your app in settings 
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'members'
+]
+
+8) py manage.py migrate
+9) py manage.py makemigrations members -> automatic create a table based on model.py, run under main project folder
+10) py manage.py migrate ->create a table based on migrations.py, run sql command internally
+11) py manage.py sqlmigrate members 0001 -> view sql command that gets executed
+12) py manage.py shell -> open shell for python sql query
+13) from members.models import Member
+	Member.objects.all().values()
+	member1 = Member(firstname='Tobias', lastname='Refsnes')
+member2 = Member(firstname='Linus', lastname='Refsnes')
+member3 = Member(firstname='Lene', lastname='Refsnes')
+member4 = Member(firstname='Stale', lastname='Refsnes')
+member5 = Member(firstname='Jane', lastname='Doe')
+members_list = [member1, member2, member3, member4, member5]
+for x in members_list:
+	x.save()
+
+14) py manage.py createsuperuser -> to create superuser for admin page
+
